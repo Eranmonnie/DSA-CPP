@@ -1,0 +1,28 @@
+function selection_sort (A[]: list of variabled)
+
+    n = length of A[]
+    i = 0
+
+    while i less than n-1 do
+        // Find the index of the minimum element in the unsorted part of the list
+        minIndex = i
+
+        j = i plus 1
+
+        while j less than n-1 do
+            if A[j] less than A[minIndex] then
+                minIndex = j
+
+            end if
+            increment j by 1
+        end while
+
+        // Swap the minimum element with the first element of the unsorted part
+        if minIndex not equals to  i then
+            swap A[i] and A[minIndex]
+        end if
+
+        increment i by 1
+    end while
+    
+end function

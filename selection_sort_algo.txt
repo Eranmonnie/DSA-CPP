@@ -1,0 +1,30 @@
+[Algorithm: Selection Sort]
+
+    A <-ARRAY[]
+
+    n <- LENGTH(A)
+
+    i <- 0 
+
+    REPEAT while i < n-1
+
+        minindex <-i
+
+        j <- i+1
+
+        REPEAT while j < n-1
+
+            If A[j] < A[minIndex]
+
+                [then update minIndex to j]
+                minindex <-j
+
+            j <- j+1
+
+        If j != minIndex
+        
+            [then swap values of minindex and j in the array]
+             SWAP(A[j], A[minIndex]) 
+
+        i <-i+1
+ 
