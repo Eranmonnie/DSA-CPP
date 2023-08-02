@@ -41,13 +41,11 @@ int main(){
         for(int i = 0; i < length; i++){ //print each element in array 
             cout<<arr[i] << " "; 
         }
-        
+
     cout<<"\n";
 
     p = selection_sort(arr,length); //function call
-
-   
-    
+       
     cout<<"sorted array \n";
     for(int i = 0; i < length; i++){ //print each element in array 
         cout<<p[i] << " "; 
