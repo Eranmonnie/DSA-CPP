@@ -7,17 +7,16 @@ void swap(int& a, int& b) {
     b = temp;
 }
 
-int* bubble_sort(int* arr, int length){ // selection sort function  
+int* insertion_sort(int* arr, int length){ // selection sort function  
     
     for(int i = 0; i < length; i++){
 
-       for(int j = 0; j < length; j++){
+        int j = i; 
 
-        if (arr[j] > arr[j+1]){
-            swap(arr[j], arr[j+1]);
+        while(arr[j-1] > arr[j] && j!= 0){
+            swap(arr[j-1], arr[j]);
+            j = j-1;
         }
-
-       }
 
     }
 
@@ -38,7 +37,7 @@ int main(){
 
     cout<<"\n";
 
-    p = bubble_sort(arr,length); //function call
+    p = insertion_sort(arr,length); //function call
        
     cout<<"sorted array \n";
     for(int i = 0; i < length; i++){ //print each element in array 
