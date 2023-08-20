@@ -79,10 +79,10 @@ class stack{
         else{
             cout<<"front = "<<front;
             cout<<"items : \n";
-            int i= front;
-            while(i <= rear){
+            int i= rear;
+            while(i >= front){
                 cout<<items[i];
-                i = i+1;
+                i = i-1;
             }
         }
     }
