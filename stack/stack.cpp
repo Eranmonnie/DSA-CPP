@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class circular_queue{
+class stack{
     int front;
     int rear;
     int length;
@@ -9,7 +9,7 @@ class circular_queue{
     
     
 
-    public : circular_queue(int arrsize){ //costructor
+    public : stack(int arrsize){ //costructor
         front = -1;
         rear = -1;
         length =  arrsize ;
@@ -28,7 +28,7 @@ class circular_queue{
     }
 
    bool isFull(){ //is full method
-        if ( (front == 0 && rear == length - 1) || (front == rear+1) ){
+        if (front == 0 && rear == length - 1){
             return true;
         }
         else{
@@ -47,7 +47,7 @@ class circular_queue{
             front = 0;
         }
         
-        rear = (rear +1)% length;
+        rear = rear + 1;
         items[rear] = data;
         return rear;
         }
@@ -66,8 +66,8 @@ class circular_queue{
                 return -1;
             }
             else{
-                front = (front + 1) % length;
-                return front;
+                rear = rear - 1;
+                return rear;
             }  
         }
     }
@@ -80,11 +80,10 @@ class circular_queue{
             cout<<"front = "<<front;
             cout<<"items : \n";
             int i= front;
-            while(i != rear){
+            while(i <= rear){
                 cout<<items[i];
-                i = (i+1)%length;
+                i = i+1;
             }
-            cout<<items[rear];
         }
     }
 
@@ -92,7 +91,7 @@ class circular_queue{
 
 int main(){
 
-circular_queue numbers(5);
+stack numbers(5);
 numbers.insert(4);
 numbers.insert(7);
 numbers.insert(8);
