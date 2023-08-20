@@ -81,7 +81,7 @@ class circular_queue{
             cout<<"items : \n";
             int i= front;
             while(i != rear){
-                cout<<items[i] +"\n"<<;
+                cout<<items[i]<<;
                 i = (i+1)%length;
             }
             cout<<items[rear];
