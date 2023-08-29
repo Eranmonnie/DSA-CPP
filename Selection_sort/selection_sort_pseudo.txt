@@ -26,4 +26,3 @@ function selection_sort (A[]: list of variabled)
     end while
     
 end function
-<

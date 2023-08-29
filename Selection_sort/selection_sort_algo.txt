@@ -28,3 +28,8 @@
 
         i <-i+1
  
+
+
+ //READ for inputs 
+ //REPEAT while for loop 
+ //END 
