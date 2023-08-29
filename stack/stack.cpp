@@ -66,6 +66,7 @@ class stack{
                 return -1;
             }
             else{
+                items[rear] = NULL;
                 rear = rear - 1;
                 return rear;
             }  
