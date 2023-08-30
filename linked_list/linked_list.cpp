@@ -48,17 +48,19 @@ class linked_list{
     }
 
     void pop (int x){
+        node* prev;
         node* temp = head;
         while(temp->data != x){
+            prev = temp;
             temp = temp->next;
         }
 
-        if (temp->next->next != NULL){
-             temp->next = temp->next->next;
+        if (temp->next != NULL){
+             prev->next = temp->next;
         }
 
         else{
-            temp->next = NULL;
+            prev->next = NULL;
         }
     }
        
@@ -71,7 +73,8 @@ class linked_list{
                 do{
                     cout<<temp->data<<" \n";
                     temp = temp->next;
-                } while (temp->next != NULL || temp->data);
+                } while (temp->next != NULL);
+                cout<<temp->data;
                 
 
             }
@@ -87,5 +90,7 @@ int main(){
     number.insert(3);
     number.insert(4);
     number.insert(5);
+    number.display();
+    number.pop(3);
     number.display();
 }
