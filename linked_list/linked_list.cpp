@@ -21,7 +21,7 @@ class linked_list{
    public :  node* head;
 
     linked_list(){
-
+        head = new node();
     }
   
 
@@ -29,21 +29,21 @@ class linked_list{
         if (head->next == NULL){
             return true;
         }
+
+        else{
+            return false;
+        }
     }
 
     void insert(int x){
-        if (isEmpty()){
-            cout<<"linked list is empty ";
-        }
 
-        else{
             node* temp = head;
-            node* data;
+            node* data = new node(x);
             while(temp->next != NULL){
                 temp = temp->next;
             }
             temp->next = data;
-        }
+
         
     }
 
@@ -71,7 +71,8 @@ class linked_list{
                 do{
                     cout<<temp->data<<" \n";
                     temp = temp->next;
-                } while (temp->next != NULL);
+                } while (temp->next != NULL || temp->data);
+                
 
             }
            
