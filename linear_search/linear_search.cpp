@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int linear_search(int* arr , int val);
+int linear_search(int* arr ,int val);
 
 int main(){
 
@@ -13,13 +13,12 @@ return 0;
 
 int linear_search(int* arr, int val){
 
-    int length = sizeof(arr);
+    int length = sizeof(arr) / sizeof(arr[0]);
 
-    for (int i=0; i<length; i++){
+    for (int i=0; i < length; i++){
         if (arr[i] == val){
             return i;
         }    
     }
-    
-    
+    return -1;
 }

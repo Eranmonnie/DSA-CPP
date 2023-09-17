@@ -62,6 +62,7 @@ class stack{
 
             if (front == rear){
                 front = -1;
+                items[rear] = NULL;
                 rear = -1;
                 return -1;
             }
